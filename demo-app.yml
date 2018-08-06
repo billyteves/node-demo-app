@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: index.docker.io/in4it/node-demo-app
+        image: index.docker.io/billyteves/node-demo-app
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
