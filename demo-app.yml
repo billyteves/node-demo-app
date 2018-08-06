@@ -1,3 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: demoapp
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -17,6 +22,7 @@ spec:
       containers:
       - name: demo-app
         image: index.docker.io/in4it/node-demo-app
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
         livenessProbe:
@@ -40,4 +46,4 @@ spec:
     app: demo-app
   type: NodePort
 
-# test commit 3
+# test commit 1
